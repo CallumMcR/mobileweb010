@@ -1,0 +1,34 @@
+{
+    "notifications": [
+        {
+            "id":1,
+            "title":"Stamford Event: Burghley House Horse Trials",
+            "body":"Burghley House Horse trials are starting this weekend, click here to find out more",
+            "image":"/images/landmarks/burghleyhouse.jpg",
+            "icon":"/images/landmarks/burghleyhouse.jpg",
+            "vibration": "[200, 100, 200, 100, 200, 100, 200]",
+            "linkaddress":"http://127.0.0.1:5501",
+            "tag":"HelloStamfordEvent1"
+        },
+        {
+            "id":2,
+            "title":"Stamford Event: Burghley House Fireworks",
+            "body":"Fireworks at burghley house this weekend.",
+            "image":"/images/landmarks/burghleyhouse.jpg",
+            "icon":"/images/landmarks/burghleyhouse.jpg",
+            "vibration": "[200, 100, 200, 100, 200, 100, 200]",
+            "linkaddress":"http://127.0.0.1:5501",
+            "tag":"HelloStamfordEvent2"
+        },
+        {
+            "id":3,
+            "title":"Stamford Event: Burghley House Ibiza Night",
+            "body":"Burghley house is hosting an Ibiza night",
+            "image":"/images/landmarks/burghleyhouse.jpg",
+            "icon":"/images/landmarks/burghleyhouse.jpg",
+            "vibration": "[200, 100, 200, 100, 200, 100, 200]",
+            "linkaddress":"http://127.0.0.1:5501",
+            "tag":"HelloStamfordEvent3"
+        }
+    ]
+}

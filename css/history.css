@@ -1,0 +1,32 @@
+.grid-history {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.grid-history .grid-item {
+    padding: 2.5rem;
+}
+
+.font-header-history{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:900px) {
+    .grid-history {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+
+}
+
+.grid-history .grid-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

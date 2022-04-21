@@ -1,0 +1,75 @@
+<div class="navbar center fs-navbar" id="myNavBar">
+
+
+    <a class="logo" href="index.html"> Hello Stamford</a>
+    <a id="home" class="pad-x" href="index.html">Home</a>
+
+    <div class="dropdown">
+        <button class="dropbtn center">About Stamford
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="history.html">History</a>
+            <a href="weather.html">Weather</a>
+            <a href="location.html">How to get to Stamford</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn center">Explore
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="food.html">Food</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="locations.html">Locations of interest</a>
+            <a href="wildlife.html">Wildlife</a>
+        </div>
+    </div>
+
+
+
+    <a id="aboutus" class="pad-x" href="events.html">Events</a>
+
+
+    <div class="dropdown">
+        <button class="dropbtn center">More
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="filters.html">Camera Filters</a>
+        </div>
+    </div>
+
+
+    <div class="nav-search-container">
+        <div class="d-flex justify-content-center" style="position: relative;">
+            <i id="navbar-speech-icon" class="fa fa-microphone microphone-ico" onclick="startRecording();"></i>
+            <input id="navbar-search-text" type="text" value="" placeholder="Search..">
+
+            <button type="button" onclick="createSearchHref();">
+                <i class="fa fa-search"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+    <a name="hamburgerMenu" href="javascript:void(0);" class="icon" onclick="expandNavBar()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+
+
+
+</div>
+<div class="navbar2 center fs-navbar">
+    <div class="search-bar">
+        <input id="navbar2-search-text" type="text" placeholder="Search..." />
+        <i class="fa fa-search search-ico" onclick="createSearchHref();"></i>
+        <i id="navbar2-speech-icon" class="fa fa-microphone microphone-ico" onclick="startRecording();"></i>
+    </div>
+</div>
+
+<div class="lowerNavBar">
+</div>

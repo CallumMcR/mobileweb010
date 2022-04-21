@@ -1,0 +1,50 @@
+/* Rounded buttons */
+
+.menu-button {
+    border: 5px solid #800020;
+    background-color: #800020;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    border: 5px solid #800020;
+    background-color: white;
+    color: #800020;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.rounded-button {
+    border: 5px solid white;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50px;
+}
+
+.rounded-button:hover {
+    border: 5px solid white;
+    color: #800020;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50px;
+}

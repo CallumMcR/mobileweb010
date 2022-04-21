@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Hello Stamford
+    </title>
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" name="homepage">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/basic.css" type="text/css">
+    <link rel="stylesheet" href="css/buttons.css" type="text/css">
+    <link rel="stylesheet" href="css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="css/weather.css" type="text/css">
+    <link rel="stylesheet" href="css/homepage.css" type="text/css">
+    <script src="javascript/speechToText.js" defer></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300&display=swap" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css"
+        integrity="sha512-H4E1ASW8Ru1Npd1wQPB7JClskV8Nv1FG/bXK6TWMD+U9YMlR+VWUZp7SaIbBVBV/iRtefsIsv9dLSN6fdUI36w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('serviceWorker.js');
+        };
+        Notification.requestPermission().then(function (result) {
+        });
+    </script>
+
+
+    <script type="text/javascript" src="javascript/addNavAndFooter.js"></script>
+
+</head>
+
+<body onload="getNavBar();getFooter();">
+
+
+    <section id="content">
+
+
+
+        <section id="navbar">
+            <div id="navbar-header">
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section id="header-image">
+            <div class="container">
+                <div class="img-header" id="carousel-header">
+                    <script>
+                        var slideIndex = 0;
+                        function showSlides() {
+                            var imageURLs = ["../images/banners/riverwelland.webp", "../images/banners/townaerialview.webp", "../images/banners/burghleyhouse.webp"]
+                            slideIndex++;
+                            if (slideIndex >= imageURLs.length) { slideIndex = 0 }
+                            document.getElementById('carousel-header').style.backgroundImage = "url(" + imageURLs[slideIndex] + ")";
+                            setTimeout(showSlides, 10000);
+                        }
+                        showSlides();
+                    </script>
+                    <div class="img-header-darken">
+
+                        <div class="img-header-topl font-white fw-normal center">
+                            <div class="container" style="background-color: rgb(0,35,102); padding: 5px;">
+                                STAMFORD
+                            </div>
+
+                        </div>
+
+                        <div class="img-header-bottoml font-white fw-normal">
+
+                            <div class="container">
+                                <div class="d-flex justify-content-center">
+                                    <a name="facebook social" href="https://en-gb.facebook.com/StamfordUK/"
+                                        class="container px-4">
+                                        <div class="social-fb fab fa-facebook-f text-center" style="font-size: 1.5rem;">
+                                        </div>
+                                    </a>
+                                    <a name="twitter social" href="https://twitter.com/stamfordwebsite"
+                                        class="container px-4">
+                                        <div class="social-tw fab fa-twitter text-center" style="font-size: 1.5rem;">
+                                        </div>
+                                    </a>
+                                    <div class="container">
+                                        <div class="center-vertically-relative">
+                                            Follow us on our socials
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="cards-header" style="background-color: white;">
+            <div class="container py-3">
+                <div class="text-center font-burgundy fs-imageHeader fw-bolder">
+                    Select an option below to find out more
+                </div>
+            </div>
+
+        </section>
+
+        <section id="cards" class="my-1">
+            <div class="container-fluid mx-grid-vw">
+                <div class="grid">
+
+                    <div class="grid-item">
+                        <a href="#">
+                            <div class="card-homepage">
+                                <div class="card-title py-4 container">
+                                    <div class="center-vertically-relative ">
+                                        <div class="card-icon">
+                                            <i class="bi bi-calendar-event-fill"></i>
+                                        </div>
+                                        <div class="fw-bolder fs-card-header">
+                                            Events
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="fw-normal py-4 card-description">
+                                        <div class="center-vertically">
+                                            Stamford has a plethora of different events to suit your needs, ranging from
+                                            bands to horse races.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="grid-item">
+
+                        <a href="weather.html">
+                            <div class="card-homepage">
+                                <div class="card-title py-4 container">
+                                    <div class="center-vertically-relative ">
+                                        <div class="card-icon">
+                                            <i class="fa-solid fa-sun"></i>
+                                        </div>
+                                        <div class="fw-bolder fs-card-header">
+                                            Weather
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="fw-normal py-4 card-description">
+                                        <div class="center-vertically">
+                                            Our reliable weather forcast shows the forecast for every three hours, for
+                                            five
+                                            days so you'll know when to head to Stamford.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+
+
+                    <div class="grid-item">
+
+                        <a href="history.html">
+                            <div class="card-homepage">
+                                <div class="card-title py-4 container">
+                                    <div class="center-vertically-relative ">
+                                        <div class="card-icon">
+                                            <i class="fa-solid fa-timeline"></i>
+                                        </div>
+                                        <div class="fw-bolder fs-card-header">
+                                            History
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="container">
+                                    <div class="fw-normal py-4 card-description">
+                                        <div class="center-vertically">
+                                            Curious about how Stamford came to be? Want to read about the interesting
+                                            events that have taken in Stamford over the years? Click here
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                    <!-- Next 3 Grid row 2 -->
+
+                    <div class="grid-item">
+                        <a href="location.html">
+                            <div class="card-homepage">
+                                <div class="card-title py-4 container">
+                                    <div class="center-vertically-relative ">
+                                        <div class="card-icon">
+                                            <i class="fa-solid fa-map"></i>
+                                        </div>
+                                        <div class="fw-bolder fs-card-header">
+                                            Location
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="container">
+                                    <div class="fw-normal py-4 card-description">
+                                        <div class="center-vertically">
+                                            Not sure how to get to Stamford from your location? Click here to find out
+                                            how.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="grid-item">
+                        <a href="hotels.html">
+                            <div class="card-homepage">
+                                <div class="card-title py-4 container">
+                                    <div class="center-vertically-relative ">
+                                        <div class="card-icon">
+                                            <i class="fa-solid fa-bed"></i>
+                                        </div>
+                                        <div class="fw-bolder fs-card-header">
+                                            Hotels
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="container">
+                                    <div class="fw-normal py-4 card-description">
+                                        <div class="center-vertically">
+                                            Need somewhere to stay while you visit? Click here to find out where you can
+                                            stay.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="grid-item">
+                        <a href="wildlife.html">
+                            <div class="card-homepage">
+                                <div class="card-title py-4 container">
+                                    <div class="center-vertically-relative ">
+                                        <div class="card-icon">
+                                            <i class="fa-solid fa-crow"></i>
+                                        </div>
+                                        <div class="fw-bolder fs-card-header">
+                                            Wildlife
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="container ">
+                                    <div class="fw-normal py-4 card-description">
+                                        <div class="center-vertically">
+                                            Perhaps you're here to fish, or birdwatch. No matter the case, click here to
+                                            see
+                                            what you can find.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+        <section>
+
+            <div class="video-container-fluid mx-grid-vw video-box">
+
+                <div class="video-bg-red font-white rounded-top">
+                    <div class="fs-imageHeader video-header">
+                        Stamford
+                    </div>
+                </div>
+
+                <div class="video-bg-body rounded-bottom">
+                    <div class="grid-video">
+                        <div class="grid-item">
+                            <iframe src="https://www.youtube.com/embed/eR8tg18G7KQ" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="grid-item text-start">
+                            <div class="container">
+                                <div class="video-content-header">
+                                    Welcome to Stamford
+                                </div>
+                                <div class="video-content-body py-3">
+                                    Heard of stamford but not sure what makes Stamford such a beautiful town?
+                                    Watch this video to get a virtual tour around our town and see a few of the
+                                    many places you can go and visit on a day out.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
+
+
+        <section class="">
+            <div class="tweet-container-title tweet-title py-3">
+                Stamford News
+            </div>
+            <div class="tweets-container">
+
+
+                <div class="grid-tweet">
+                    <div class="grid-item">
+
+                        <a class="twitter-timeline" data-lang="en" data-height="500" data-theme="light"
+                            href="https://twitter.com/Mercury1712?ref_src=twsrc%5Etfw">Tweets by Mercury1712</a>
+                    </div>
+                    <div class="grid-item">
+                        <a class="twitter-timeline" data-lang="en" data-height="500" data-theme="light"
+                            href="https://twitter.com/burghleyhouse">Tweets by Burghley House</a>
+                    </div>
+                    <div class="grid-item">
+                        <a class="twitter-timeline" data-lang="en" data-height="500" data-theme="light"
+                            href="https://twitter.com/stamfordtc">Tweets by Stamford Council</a>
+                    </div>
+                </div>
+
+
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <section>
+        <div id="footer">
+
+        </div>
+    </section>
+
+</body>
+
+</html>

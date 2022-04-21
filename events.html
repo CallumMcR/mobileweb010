@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Hello Stamford - Events
+    </title>
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" name="homepage">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/basic.css" type="text/css">
+    <link rel="stylesheet" href="css/buttons.css" type="text/css">
+    <link rel="stylesheet" href="css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="css/events.css" type="text/css">
+    <link rel="stylesheet" href="css/homepage.css" type="text/css">
+    <script src="javascript/speechToText.js" defer></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300&display=swap" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css"
+        integrity="sha512-H4E1ASW8Ru1Npd1wQPB7JClskV8Nv1FG/bXK6TWMD+U9YMlR+VWUZp7SaIbBVBV/iRtefsIsv9dLSN6fdUI36w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script type="text/javascript" src="javascript/addNavAndFooter.js"></script>
+    <script type="text/javascript" src="javascript/eventsFramework.js"></script>
+</head>
+
+<body onload="getNavBar();getFooter();">
+
+    <section id="content">
+
+
+        <section id="navbar">
+            <div id="navbar-header">
+                
+
+            </div>
+
+
+        </section>
+
+
+        <section>
+
+            <div class="event-container-title py-3">
+                <div class="container-fluid text-center event-header">
+                    Events
+                </div>
+                <div class="container-fluid text-center" id="stamford-events">
+
+                </div>
+            </div>
+
+
+
+            <script type="text/javascript" src="javascript/loadAPIData.js"></script>
+            <script>
+                let eventAPIURL = "https://app.ticketmaster.com/discovery/v2/events?apikey=UpKyAY4LhHcOZUgMOAbBv2NvWY0C9LOa&keyword=UK&locale=*"
+                loadAPIData("GET", eventAPIURL)
+                    .then(data => {
+                        if (data !== null) {
+                            apiResponse = JSON.parse(data);
+                            var organisedArray = [];
+
+                            const numberOfEventsToDisplay = 20;
+
+                            var numberOfStamfordEvents = 0;
+                            var numberOfEvents = (apiResponse._embedded.events).length;
+
+                            var comparisonNumber = numberOfEvents;
+                            if (numberOfEvents > numberOfEventsToDisplay) {
+                                comparisonNumber = numberOfEventsToDisplay;
+                            }
+                            else {
+                                comparisonNumber = numberOfEvents;
+                            }
+
+                            for (var index = 0; index < comparisonNumber; index++) {
+
+                                var directoryVenue = apiResponse._embedded.events[index]._embedded.venues;
+
+                                for (var index2 = 0; index2 < (directoryVenue).length; index2++) {
+
+                                    if ((directoryVenue[index2].name.toLowerCase()).includes("stamford")) {
+                                        organisedArray.unshift(apiResponse._embedded.events[index]);
+                                        numberOfStamfordEvents++;
+                                    }
+                                    else {
+                                        organisedArray.push(apiResponse._embedded.events[index]);
+                                    }
+                                }
+
+                            }
+                            addEvents(organisedArray, numberOfStamfordEvents);
+                        }
+
+                    });
+
+
+            </script>
+
+            <div class="container-fluid">
+                <div class="grid-event" id="event-list">
+                    <div class="grid-item">
+
+
+                        <div class="event-container">
+                            <div class="fa-solid fa-circle-info">
+                            </div>
+                            <div class="click-box">
+
+
+                                <div class="event-container-body">
+                                    <div class="main-body">
+                                        <div class="event-fluid">
+                                            Header
+                                        </div>
+                                        <div class="event-fluid">
+                                            Body
+                                        </div>
+                                        <a href="index.html" class="py-1">Click here to book</a>
+                                    </div>
+                                </div>
+
+                                <div class="event-picture-container">
+                                    <div class="event-container-overlayText">
+                                        <div class="event-align">
+                                            Event Title Here
+                                        </div>
+
+
+                                    </div>
+                                    <img src="images/hotels/candlesticks.jpg">
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section>
+        <div id="footer">
+
+        </div>
+    </section>
+
+</body>
+
+</html>

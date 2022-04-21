@@ -1,0 +1,240 @@
+.img-header {
+  background-image: url("../images/banners/riverwelland.jpg");
+  height: 28rem;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.img-header-darken {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 28rem;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+
+}
+
+
+
+.img-header-topl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 2vw;
+  padding-top: 2vh;
+  font-size: x-large;
+}
+
+.img-header-bottoml {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 2vw;
+  padding-bottom: 2vh;
+  font-size: x-large;
+}
+
+.social-fb {
+  background-color: rgb(66, 103, 178);
+  border-radius: 50%;
+  color: white;
+  padding: 0.5em 0.75em;
+}
+
+
+
+.social-tw {
+  background-color: #00acee;
+  border-radius: 50%;
+  color: white;
+  padding: 0.5em 0.75em;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+
+
+.grid-tweet{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.grid-tweet .grid-item {
+  padding: 2.5rem;
+  overflow-wrap: break-word;
+  position: relative;
+}
+
+
+
+.grid-video {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.grid-video .grid-item {
+  padding: 2.5rem;
+  overflow-wrap: break-word;
+  position: relative;
+}
+
+.video-container-fluid {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  position: relative;
+  overflow-wrap: break-word;
+  height: auto;
+}
+
+@media only screen and (max-width:900px) {
+  .grid-video {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .video-container-fluid {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    position: relative;
+    overflow-wrap: break-word;
+    height: auto;
+  }
+
+  .grid-tweet{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+
+}
+
+.grid-video .grid-item img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.video-header {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.video-box {
+  margin-bottom: 40px;
+}
+
+
+
+.video-bg-red {
+  background-color: #800020;
+}
+
+.video-bg-body {
+  background-color: white;
+  /* https://www.htmlcsscolor.com/hex/800020 website for color percentages */
+}
+
+.video-content-header {
+  color: midnightblue;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+.video-content-body {
+  color: midnightblue;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.grid-item iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 285px;
+}
+
+
+
+
+.tweets-container{
+  justify-content: center;
+  display: flex;
+}
+
+@media only screen and (max-width:900px) {
+  .tweets-container{
+    justify-content: none;
+    display: block;
+    text-align: center;
+  }
+
+}
+
+
+.tweet-title{
+  font-size: x-large;
+  font-weight: bold;
+  color: black;
+}
+
+.tweet-container-title{
+  border-bottom: 3px solid;
+  border-color: #800020;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}

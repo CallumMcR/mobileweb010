@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Hello Stamford - Filters
+    </title>
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" name="homepage">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/basic.css" type="text/css">
+    <link rel="stylesheet" href="css/buttons.css" type="text/css">
+    <link rel="stylesheet" href="css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="css/weather.css" type="text/css">
+    <link rel="stylesheet" href="css/homepage.css" type="text/css">
+    <link rel="stylesheet" href="css/filters.css" />
+    <script src="javascript/video.js" defer></script>
+    <script src="javascript/speechToText.js" defer></script>
+    <script type="text/javascript" src="javascript/addNavAndFooter.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300&display=swap" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css"
+        integrity="sha512-H4E1ASW8Ru1Npd1wQPB7JClskV8Nv1FG/bXK6TWMD+U9YMlR+VWUZp7SaIbBVBV/iRtefsIsv9dLSN6fdUI36w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+</head>
+
+<body onload="getNavBar();getFooter();">
+
+    <section id="content">
+
+
+        <section id="navbar">
+            <div id="navbar-header">
+               
+
+            </div>
+
+
+        </section>
+
+
+        <section>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="text-center">
+
+                        <h2>Camera filters</h1>
+
+                        <h1>
+                            Enjoying Stamford? Utilise our camera filters to take pictures that suit you.
+                        </h1>
+                    </div>
+                    <div class="grid-vid">
+                        <div class="grid-item">
+                            <div id="initial-display-video-button" class="video-container">
+                                <div class="no-video-present">
+                                    <button id="CaptureVideoButton"><i class="fa-solid fa-video"></i> Capture
+                                        video</button>
+                                </div>
+                            </div>
+
+                            <video id="video-content" autoplay></video>
+                        </div>
+                        <div class="grid-item">
+                            <img id="screenshot-img">
+                        </div>
+                    </div>
+
+                    <div class="container-fluid py-3">
+                        <div class="camera-icon-container">
+
+                            <button id="TakeScreenshotButton" disabled><i class="fa-solid fa-camera"></i> Take
+                                screenshot</button>
+                            <button id="SaveScreenshotButton" disabled><i class="fa-solid fa-cloud-arrow-down"></i> Save
+                                screenshot</button>
+                            <button id="ApplyCSSFiltersButton" disabled><i class="fa-solid fa-palette"></i> Apply CSS
+                                filter</button>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section>
+        <div id="footer">
+
+        </div>
+    </section>
+
+</body>
+
+</html>

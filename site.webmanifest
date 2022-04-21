@@ -1,0 +1,22 @@
+{
+    "name": "Hello Stamford",
+    "short_name": "Hello Stamford",
+    "description": "Hello Stamford, a site focused on presenting you with the wonderful town of Stamford",
+    "icons": [
+        {
+            "src": "images/logo/chrome.jpg",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/logo/chrome.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "id": "/",
+    "start_url": "/",
+    "theme_color": "#880e27",
+    "background_color": "#880e27",
+    "display": "standalone"
+}

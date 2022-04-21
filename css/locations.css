@@ -1,0 +1,54 @@
+/* Grid Related*/
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+}
+
+.grid-2 .grid-item {
+    padding: 1rem;
+}
+
+@media only screen and (max-width:900px) {
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+
+}
+
+.grid-2 .grid-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 450px;
+}
+
+
+.landmark-bg {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.landmark-header {
+    font-size: large;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.landmark-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.landmark-body a {
+    color: blue;
+    text-decoration: underline;
+}

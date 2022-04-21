@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Hello Stamford - Weather
+    </title>
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" name="homepage">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/basic.css" type="text/css">
+    <link rel="stylesheet" href="css/buttons.css" type="text/css">
+    <link rel="stylesheet" href="css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="css/weather.css" type="text/css">
+    <link rel="stylesheet" href="css/homepage.css" type="text/css">
+    <script src="javascript/speechToText.js" defer></script>
+    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300&display=swap" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css"
+        integrity="sha512-H4E1ASW8Ru1Npd1wQPB7JClskV8Nv1FG/bXK6TWMD+U9YMlR+VWUZp7SaIbBVBV/iRtefsIsv9dLSN6fdUI36w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+        <script type="text/javascript" src="javascript/addNavAndFooter.js"></script>
+
+</head>
+
+<body onload="getNavBar();getFooter();">
+    <section id="content">
+        <section id="navbar">
+            <div id="navbar-header">
+
+
+            </div>
+
+
+        </section>
+
+
+        <section>
+
+            <script type="text/javascript" src="javascript/loadAPIData.js"></script>
+            <script>
+                var jsonOfWeatherData;
+                let weatherAPIURL = 'https://api.openweathermap.org/data/2.5/forecast?q=Stamford,uk&APPID=ac1e8f781a40f2e495ec378a7aefc3e7';
+                loadAPIData("GET", weatherAPIURL)
+                    .then(data => {
+                        if (data !== null) {
+                            apiResponse = JSON.parse(data);
+                            jsonOfWeatherData = apiResponse;
+                            sessionStorage.setItem('weatherData', JSON.stringify(apiResponse));
+                            changeDay(jsonOfWeatherData, 0);
+                        }
+
+                    });
+
+            </script>
+        </section>
+
+        <section class="weather-margin-top">
+
+
+            <div class="weather-container-fluid ">
+
+                <div class="weather-body rounded-corner">
+                    <div class="fs-weather-mainHeader rounded-top">
+                        <div class="container-fluid py-4 text-center font-white">
+                            <!-- Weather Header -->
+                            <div class="font-opensans">
+                                Stamford, UK
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-weather-info">
+                        <div id="weather-current-img" class="grid-item ">
+
+                        </div>
+                        <div class="grid-item weather-current-details-container-box" id="weather-current-details">
+
+                        </div>
+                    </div>
+
+
+                    <div id="weather-buttons-container" class="weather-buttons-container">
+                        <button id="weather-forecast-1" class="weather-active" onclick="changeDay(jsonOfWeatherData,0)">
+                            Today
+                        </button>
+                        <button id="weather-forecast-2" onclick="changeDay(jsonOfWeatherData,1)">
+                            Tomorrow
+                        </button>
+                        <button id="weather-forecast-3" onclick="changeDay(jsonOfWeatherData,2)">
+                        </button>
+                        <button id="weather-forecast-4" onclick="changeDay(jsonOfWeatherData,3)">
+                        </button>
+                        <button id="weather-forecast-5" onclick="changeDay(jsonOfWeatherData,4)">
+                        </button>
+
+                    </div>
+                    <script type="text/javascript" src="javascript/weatherFunctions.js"></script>
+                    <script>
+                        var today = new Date();
+
+                        for (y = 3; y < 6; y++) {
+                            var date = new Date(today);
+                            var idName = "weather-forecast-" + y;
+                            date.setDate(today.getDate() + y - 1);
+                            document.getElementById(idName).innerHTML = `${date.toLocaleDateString('en-GB')}`;
+                        }
+
+                    </script>
+
+                    <div id="weather-icon-navbar" class="weather-icon-navbar">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </section>
+
+    <section>
+        <div id="footer">
+
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.header-maps{
+    color: midnightblue;
+    font-size: large;
+}
+
+.google-maps-border{
+    border:  5px solid midnightblue;
+    border-radius: 5px;
+}

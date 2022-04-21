@@ -1,0 +1,276 @@
+.fs-navbar {
+    font-size: 1rem;
+}
+
+.navbar {
+    background-color: #800020;
+    overflow: hidden;
+}
+
+
+
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+
+
+.navbar a:hover:not(:first-child) {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar .icon {
+    display: none;
+}
+
+.navbar a.active {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: white;
+}
+
+
+
+.lowerNavBar {
+    background-color: rgb(121, 0, 30);
+    padding: 5px;
+}
+
+
+.dropdown {
+    overflow: hidden;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media screen and (max-width: 1285px) {
+
+    .navbar2{
+        display: flex !important;
+    }
+
+    .navbar a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+
+    .hide-1285px {
+        display: none !important;
+    }
+
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .navbar.responsive button {
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .navbar.responsive .dropdown {
+        float: none;
+        display: block;
+    }
+
+    .navbar.responsive .dropdown-content {
+        position: relative;
+        float: none;
+    }
+
+    .navbar.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        text-align: center;
+    }
+
+
+    .navbar .nav-search-container {
+        display: none !important;
+
+    }
+
+    .navbar.responsive .nav-search-container {
+        display: none !important;
+
+    }
+
+}
+
+.navbar .nav-search-container {
+    display: flex;
+    float: right;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    height: 41.6px;
+    margin: 10px;
+    position: relative;
+    border-radius: 5px;
+
+}
+
+.navbar .nav-search-container input[type=text] {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
+
+.navbar .nav-search-container button {
+    float: right;
+    padding: 6px 10px;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.navbar .nav-search-container button:hover {
+ color: gray;
+}
+
+.navbar .microphone-ico {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    padding: 12px;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+
+
+.microphone-ico:hover {
+    color: rgb(0,35,125);
+}
+
+
+/* Search Bar when on mobile */
+
+
+.navbar2 {
+    background-color: #800020;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+}
+
+.navbar2 .search-bar {
+    width: 50%;
+    position: relative;
+}
+
+.navbar2 .search-bar input {
+    width: calc(100% - 60px);
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 30px;
+}
+
+.navbar2 .search-bar .search-ico {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    cursor: pointer; 
+}
+
+.navbar2 .search-bar .search-ico:hover {
+    color: gray;
+}
+
+.navbar2 .search-bar .microphone-ico {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    cursor: pointer; 
+}
+
+
+.speech-active{
+    animation: color-change 4s infinite;
+}
+
+
+  
+  @keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+  }
